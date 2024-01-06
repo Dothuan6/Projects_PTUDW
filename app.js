@@ -16,14 +16,4 @@ app.use((reg,res,next)=>{
         message: error.message || "Internal Server Error"
     });
 });
-
-
-app.use(cors());
-app.use(express.json());
-app.get("/home", (reg,res) => {
-    res.json({
-        message: "Welcome to contact book application."
-    });
-});
-
 module.exports = app;
